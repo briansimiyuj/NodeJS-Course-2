@@ -1,0 +1,7 @@
+Node JS is a runtime environment that allows us to run JavaScript on the server side. 
+
+V8 engine compiles JavaScript into machine code, allowing it to run on a browser.
+
+Node JS is written in C++ and uses the V8 engine. V8 converts JavaScript into machine code, which allows it to run on a server.
+
+video #1
