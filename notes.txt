@@ -1,6 +1,4 @@
-To check if you have Node JS installed, open a terminal and run:
-    `node -v`
-
-It will return the version of Node JS installed on your computer. If you don't have Node JS installed, you can download it from the official website: https://nodejs.org/en/download/
+To run a file, we use the node command followed by the name of the file we want to run.
+    `node ${fileName}` or `node ${fileName}.js`
 
 video #1
