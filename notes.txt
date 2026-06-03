@@ -1,7 +1,6 @@
-Node JS is a runtime environment that allows us to run JavaScript on the server side. 
+To check if you have Node JS installed, open a terminal and run:
+    `node -v`
 
-V8 engine compiles JavaScript into machine code, allowing it to run on a browser.
-
-Node JS is written in C++ and uses the V8 engine. V8 converts JavaScript into machine code, which allows it to run on a server.
+It will return the version of Node JS installed on your computer. If you don't have Node JS installed, you can download it from the official website: https://nodejs.org/en/download/
 
 video #1
