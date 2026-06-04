@@ -9,4 +9,10 @@ To read a stream, we use `createReadStream()` on the `fs` module and assign it t
 
 Then we use `on()` to listen for the `data` event. The `data` event is emitted when data is read from the stream.
 
+To write a stream, we use `createWriteStream()` on the `fs` module and assign it to a variable. `createWriteStream()` takes `${filePath}` as an argument.
+    `const writeStream = fs.createWriteStream("${filePath}")`
+
+Then we use `write()` to write data to the stream.
+    `writeStream.write("${data}")`  
+
 video #2
