@@ -1,7 +1,15 @@
-import { ages, greetings, people } from "./people.js"
+import fs from "fs"
 
-people.map((person, index) =>{
+fs.readFile("./files/about.txt", "utf-8", (err, data) =>{
 
-    greetings(person, ages[index])
+    if(err){
+
+        console.error(err)
+
+        return
+
+    }
+
+    console.log(data)
 
 })

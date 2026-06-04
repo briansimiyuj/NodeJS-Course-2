@@ -1,11 +1,11 @@
-Sometimes we might split our code into multiple files, and we want to import functions from one file to another. This is called a module.
+Node JS can read, write, create, and delete files using the `fs` module.
 
-If we want to use a function or variable from another file, we need to export it first. We can do this by using the `export` keyword.
-    `export const ${functionName} = () => { ... }` or `export const ${variableName} = 42;`
+We can use the `readFile` method on the `fs` module to read a file. This method takes two arguments: the relative path to the file and a callback function that will be called when the file is read. The callback function takes two arguments: an error object and the data read from the file. Before the callback function, we need to specify the encoding of the file. If we don't specify the encoding, the data will be returned as a buffer.
 
-Then, in the file we want to import the function or variable from, we can use the `import` keyword.
-    `import { ${functionName}, ${variableName} } from `${filePath}.${extension}`
+`fs.readFile("${filePath}", ${fileEncoding}, (err, data) =>{
 
-If we want to export multiple functions or variables, we can use write the variables and functions in normal way, and then use `export { ${functionName}, ${variableName} }` at the end of the file.
+    do something with the data      
+    
+})` 
 
 video #2
