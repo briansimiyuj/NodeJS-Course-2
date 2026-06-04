@@ -1,7 +1,9 @@
-Node JS has a global object called `global`. It works like `window` in the browser. 
+Sometimes we might split our code into multiple files, and we want to import functions from one file to another. This is called a module.
 
-`global` object has a lot of properties and methods. For example, `setTimeout`, `setInterval`, `clearTimeout`, `clearInterval`, `console`, `process`, `Buffer`, `__dirname`, `__filename`, etc.
+If we want to use a function or variable from another file, we need to export it first. We can do this by using the `export` keyword.
+    `export const ${functionName} = () => { ... }` or `export const ${variableName} = 42;`
 
-`__dirname` and `__filename` are special properties of the `global` object. They give us the absolute path of the current directory and the current file respectively.
+Then, in the file we want to import the function or variable from, we can use the `import` keyword.
+    `import { ${functionName}, ${variableName} } from `${filePath}.${extension}`
 
 video #2
