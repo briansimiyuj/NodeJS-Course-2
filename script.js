@@ -1,13 +1,13 @@
 import fs from "fs"
 
-fs.mkdir("test", { recursive: true}, err =>{
+if(fs.existsSync("./files/output.txt")){
 
-    if(err){
-        
-        console.log(err)
+    fs.unlink("./files/output.txt", err =>{
 
-    }
+        if(err) throw err
 
-    console.log("Directory created")
+        console.log("File deleted successfully")
 
-})
+    })
+
+}
