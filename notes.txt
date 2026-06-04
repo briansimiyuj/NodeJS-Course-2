@@ -1,13 +1,4 @@
-Node JS can read, write, create, and delete files using the `fs` module.
-
-We can use the `writeFile` method to write data to a file. The first argument is the path to the file, the second argument is the data to write, and the third argument is a callback function that will be called when the write operation is complete.
-
-`fs.writeFile("${filePath}, ${data} err =>{
-
-    Do something
-
-})` 
-
-If a file does not exist, it will be created. If the file already exists, it will be overwritten.
+Node JS can also create directories. To create a directory, use the fs.mkdir() method.  It takes two parameters: the path of the directory to be created and callback function.
+    `fs.mkdir(${directoryPath}, callbackFunction)`
 
 video #2
