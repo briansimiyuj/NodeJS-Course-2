@@ -1,4 +1,7 @@
-To run a file, we use the node command followed by the name of the file we want to run.
-    `node ${fileName}` or `node ${fileName}.js`
+Node JS has a global object called `global`. It works like `window` in the browser. 
 
-video #1
+`global` object has a lot of properties and methods. For example, `setTimeout`, `setInterval`, `clearTimeout`, `clearInterval`, `console`, `process`, `Buffer`, `__dirname`, `__filename`, etc.
+
+`__dirname` and `__filename` are special properties of the `global` object. They give us the absolute path of the current directory and the current file respectively.
+
+video #2
