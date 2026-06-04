@@ -1,13 +1,13 @@
 Node JS can read, write, create, and delete files using the `fs` module.
 
-We can use the `readFile` method on the `fs` module to read a file. This method takes two arguments: the relative path to the file and a callback function that will be called when the file is read. The callback function takes two arguments: an error object and the data read from the file. Before the callback function, we need to specify the encoding of the file. If we don't specify the encoding, the data will be returned as a buffer.
+We can use the `writeFile` method to write data to a file. The first argument is the path to the file, the second argument is the data to write, and the third argument is a callback function that will be called when the write operation is complete.
 
-`fs.readFile("${filePath}", ${fileEncoding}, (err, data) =>{
+`fs.writeFile("${filePath}, ${data} err =>{
 
-    do something with the data      
-    
-})`
+    Do something
 
-This is asynchronous code, meaning that the code will continue to run while the file is being read. Refer to `script.js`; 'Last line' is printed before the file is read.
+})` 
+
+If a file does not exist, it will be created. If the file already exists, it will be overwritten.
 
 video #2

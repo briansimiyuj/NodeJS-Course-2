@@ -1,17 +1,13 @@
 import fs from "fs"
 
-fs.readFile("./files/about.txt", "utf-8", (err, data) =>{
+fs.writeFile("files/output.txt", "Hello, World!", err =>{
 
     if(err){
 
-        console.error(err)
-
-        return
-
+        console.log(err)
+        
     }
 
-    console.log(data)
+    console.log("File created successfully")
 
 })
-
-console.log('Last Line')
