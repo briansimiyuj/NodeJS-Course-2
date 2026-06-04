@@ -6,4 +6,6 @@ If we want to use a function or variable from another file, we need to export it
 Then, in the file we want to import the function or variable from, we can use the `import` keyword.
     `import { ${functionName}, ${variableName} } from `${filePath}.${extension}`
 
+If we want to export multiple functions or variables, we can use write the variables and functions in normal way, and then use `export { ${functionName}, ${variableName} }` at the end of the file.
+
 video #2

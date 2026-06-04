@@ -1,3 +1,7 @@
-import { people } from "./people.js"
+import { ages, greetings, people } from "./people.js"
 
-console.log(people)
+people.map((person, index) =>{
+
+    greetings(person, ages[index])
+
+})
