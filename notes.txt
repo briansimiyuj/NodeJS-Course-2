@@ -1,4 +1,6 @@
 Node JS can also create directories. To create a directory, use the fs.mkdir() method.  It takes two parameters: the path of the directory to be created and callback function.
     `fs.mkdir(${directoryPath}, callbackFunction)`
 
+If the directory already exists, the callback function will be called with an error object. To avoid this, you we can use `recursive: true` option in the `fs.mkdir()` method. This will create the directory if it doesn't exist and will not throw an error if it does.
+
 video #2

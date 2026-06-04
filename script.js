@@ -1,6 +1,6 @@
 import fs from "fs"
 
-fs.mkdir("test", err =>{
+fs.mkdir("test", { recursive: true}, err =>{
 
     if(err){
         
