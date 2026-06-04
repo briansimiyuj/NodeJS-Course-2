@@ -1,13 +1,11 @@
 import fs from "fs"
 
-if(fs.existsSync("./files/output.txt")){
+const readStream = fs.createReadStream("./files/blog.txt", "utf-8") 
 
-    fs.unlink("./files/output.txt", err =>{
+readStream.on("data", chunk =>{
 
-        if(err) throw err
+    console.log("---- New Chunk ----")
 
-        console.log("File deleted successfully")
+    console.log(chunk)
 
-    })
-
-}
+})

@@ -1,12 +1,12 @@
-To delete a file, we need to check if it exists and then delete it. We use `fs.existsSync(${filePath})` to check if the file exists. If it does, we use `fs.unlink(${filePath})` to delete it. `unlink` method takes two parameters: the file path and a callback function
+Sometimes files can be too big to read, write or delete. That's where `Streams` and `Buffers` come in.
 
-`if(fs.existsSync(${filePath})){
+A stream is a sequence of data that is transferred from a server to a client or vice versa. A buffer is a temporary storage area that holds data while it is being transferred.
 
-    fs.unlink(${filePath}, (err) => {
-        if (err) throw err;
-        console.log(`${filePath} was deleted`);
-    })
+There are two types of streams: readable and writable. A readable stream is a stream that comes from a server and is used to read data. A writable stream is a stream that goes to a server and is used to write data.
 
-}`
+To read a stream, we use `createReadStream()` on the `fs` module and assign it to a variable. `createReadStream()` takes two arguments: the file path and an the file encoding. 
+    `const readStream = fs.createReadStream("${filePath}", "${encoding}")`
+
+Then we use `on()` to listen for the `data` event. The `data` event is emitted when data is read from the stream.
 
 video #2
