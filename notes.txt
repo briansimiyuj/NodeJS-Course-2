@@ -15,4 +15,7 @@ To write a stream, we use `createWriteStream()` on the `fs` module and assign it
 Then we use `write()` to write data to the stream.
     `writeStream.write("${data}")`  
 
+We can also use `pipe()` method on the `readStream` to write data to the `writeStream`.
+    `readStream.pipe(writeStream)`
+
 video #2
