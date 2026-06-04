@@ -6,6 +6,8 @@ We can use the `readFile` method on the `fs` module to read a file. This method 
 
     do something with the data      
     
-})` 
+})`
+
+This is asynchronous code, meaning that the code will continue to run while the file is being read. Refer to `script.js`; 'Last line' is printed before the file is read.
 
 video #2
