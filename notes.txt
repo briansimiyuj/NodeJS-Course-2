@@ -1,9 +1,15 @@
-When we type an URL into the browser, the browser sends a request to the server for the page. The server responds data to the browser. Data can be HTML, CSS, JS, Images, Resources, etc.
+We can create a server in Node.js using the http module. We need to import it, then use the `createServer` method which takes 3 arguments: request, response, and a callback function.
 
-Each computer has an unique address that identifies it on the internet. This address is called IP address. 
+`const server = http.createServer((${request}, ${response}) =>{
+    
+})`
 
-IP address is just a sequence of numbers separated by periods. For example, `192.168.1.1` is an IP address. It's very difficult to remember IP addresses. So, we use domain names instead of IP addresses. For example, `google.com` is a domain name. When we type a domain name into the browser, the browser converts it into an IP address.
+`request` is an object that contains information about the request that was made, such as the URL, method, headers, etc.
 
-Once the browser gets the IP address, it sends a request to the server for the page. The server responds with the page data. The browser then renders the page on the screen. This happens via HyperText Transfer Protocol (HTTP).
+`response` is an object that we can use to send a response back to the client.
+
+Once we define the server, we need to listen for incoming requests using the `listen` method. We need to pass in the port number, hostname, and a callback function that will be called when the server starts listening.
+
+If we don't specify a hostname, the server will listen on `localhost` by default.
 
 video #2
