@@ -1,20 +1,5 @@
-We can create a server in Node.js using the http module. We need to import it, then use the `createServer` method which takes 3 arguments: request, response, and a callback function.
+Whenever we make a change to the server file, we need to restart the server to see the changes.
+The request object contains information about the request that was made to the server. For now let's just log `request.url` and `request.method` to the console.
+The log printed `/` and `GET` to the console. The `/` is the root URL of the server and `GET` is the HTTP method
 
-`const server = http.createServer((${request}, ${response}) =>{
-    
-})`
-
-`request` is an object that contains information about the request that was made, such as the URL, method, headers, etc.
-
-`response` is an object that we can use to send a response back to the client.
-
-Once we define the server, we need to listen for incoming requests using the `listen` method. We need to pass in the port number, hostname, and a callback function that will be called when the server starts listening.
-
-If we don't specify a hostname, the server will listen on `localhost` by default.
-
-`localhost` is like a domain name that points to the local machine. It has an IP address of `127.0.0.1`.
-
-`port` numbers are like a door on a computer. It's a number that identifies a specific process that's running on a computer. It is usually attached at the end of the hostname separated by a colon.
-    `http://${hostname}:${portNumber}
-
-video #2
+video #4

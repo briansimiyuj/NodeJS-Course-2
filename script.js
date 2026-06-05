@@ -2,7 +2,7 @@ import http from "http"
 
 const server = http.createServer((request, response) =>{
 
-    console.log("Request received")
+    console.log(request.url, request.method)
 
 })
 
