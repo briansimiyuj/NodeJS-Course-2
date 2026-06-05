@@ -15,9 +15,7 @@ const server = http.createServer((request, response) =>{
 
         }else{
 
-            response.write(data)
-            
-            response.end()
+            response.end(data)
         
         }
 

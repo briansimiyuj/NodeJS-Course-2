@@ -11,4 +11,6 @@ Finally, we need to end the response. We do this by using the end method on the 
 
 We can also send HTML files, by using readFile method to read the file and then send it back to the client. Refer to script.js
 
+We can also use the `end` method to send the response back to the client. Refer to script.js
+
 video #4
