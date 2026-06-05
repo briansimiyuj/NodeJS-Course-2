@@ -1,21 +1,9 @@
-Sometimes files can be too big to read, write or delete. That's where `Streams` and `Buffers` come in.
+When we type an URL into the browser, the browser sends a request to the server for the page. The server responds data to the browser. Data can be HTML, CSS, JS, Images, Resources, etc.
 
-A stream is a sequence of data that is transferred from a server to a client or vice versa. A buffer is a temporary storage area that holds data while it is being transferred.
+Each computer has an unique address that identifies it on the internet. This address is called IP address. 
 
-There are two types of streams: readable and writable. A readable stream is a stream that comes from a server and is used to read data. A writable stream is a stream that goes to a server and is used to write data.
+IP address is just a sequence of numbers separated by periods. For example, `192.168.1.1` is an IP address. It's very difficult to remember IP addresses. So, we use domain names instead of IP addresses. For example, `google.com` is a domain name. When we type a domain name into the browser, the browser converts it into an IP address.
 
-To read a stream, we use `createReadStream()` on the `fs` module and assign it to a variable. `createReadStream()` takes two arguments: the file path and an the file encoding. 
-    `const readStream = fs.createReadStream("${filePath}", "${encoding}")`
-
-Then we use `on()` to listen for the `data` event. The `data` event is emitted when data is read from the stream.
-
-To write a stream, we use `createWriteStream()` on the `fs` module and assign it to a variable. `createWriteStream()` takes `${filePath}` as an argument.
-    `const writeStream = fs.createWriteStream("${filePath}")`
-
-Then we use `write()` to write data to the stream.
-    `writeStream.write("${data}")`  
-
-We can also use `pipe()` method on the `readStream` to write data to the `writeStream`.
-    `readStream.pipe(writeStream)`
+Once the browser gets the IP address, it sends a request to the server for the page. The server responds with the page data. The browser then renders the page on the screen. This happens via HyperText Transfer Protocol (HTTP).
 
 video #2
