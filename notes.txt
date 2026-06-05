@@ -1,3 +1,19 @@
-We can configure the routes so that we can have a different route for each page.
+Status codes describe the result of the HTTP request. They are three-digit codes and are divided into five categories:
+    200 - OK: This means that the request was successful and the server has returned the requested data.
+    300 - Redirect: This means that the requested resource has been moved to a different URL, and the client should make a new request to the new URL.
+    400 - Bad Request: This means that the server could not understand the request due to invalid syntax or missing data.
+    401 - Unauthorized: This means that the client is not authorized to access the requested resource.
+    404 - Not Found: This means that the requested resource could not be found on the server.
+    500 - Internal Server Error: This means that there was an error on the server that prevented the request from being completed.
+    503 - Service Unavailable: This means that the server is currently unable to handle the request due to a temporary overload or maintenance.
+
+    100 range: Informational responses
+    200 range: Successful responses
+    300 range: Redirection messages
+    400 range: Client error responses
+    500 range: Server error responses
+
+To set status codes, we use `statusCode` property on the `response` object.
+    `response.statusCode = 200`
 
 video #4
