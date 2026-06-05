@@ -1,13 +1,27 @@
 import http from "http"
+import fs from "fs"
 
 const server = http.createServer((request, response) =>{
 
     response.setHeader("Content-Type", "text/html")
 
-    response.write("<h1>Hello, World!</h1>")
+    fs.readFile("./views/index.html", (err, data) =>{
 
-    response.end()
+        if(err){
 
+            console.log(err)
+
+            response.end("Error loading the page")
+
+        }else{
+
+            response.write(data)
+            
+            response.end()
+        
+        }
+
+    })
 })
 
 server.listen(3000, () =>{

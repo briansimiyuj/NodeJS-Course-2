@@ -9,5 +9,6 @@ Next, we need write the data to the response object. We do this by using the wri
 Finally, we need to end the response. We do this by using the end method on the response object.
     `response.end()`
 
+We can also send HTML files, by using readFile method to read the file and then send it back to the client. Refer to script.js
 
 video #4
