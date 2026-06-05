@@ -1,5 +1,13 @@
-Whenever we make a change to the server file, we need to restart the server to see the changes.
-The request object contains information about the request that was made to the server. For now let's just log `request.url` and `request.method` to the console.
-The log printed `/` and `GET` to the console. The `/` is the root URL of the server and `GET` is the HTTP method
+The response object contains information that should be returned to the client. It can contain data, headers, and status codes.
+
+We need to formulate a response object and send it back to the client. First, we need to specify the kind of data we want to send back. We do this by using the setHeader method on the response object. We set the Content-Type header to the type of data we want to send back. 
+    `response.setHeader("Content-Type", "${dataType}")`
+
+Next, we need write the data to the response object. We do this by using the write method on the response object. We pass the data we want to send back as a parameter to the write method.
+    `response.write(${data})`
+
+Finally, we need to end the response. We do this by using the end method on the response object.
+    `response.end()`
+
 
 video #4
