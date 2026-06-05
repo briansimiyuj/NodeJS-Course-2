@@ -2,9 +2,9 @@ import http from "http"
 
 const server = http.createServer((request, response) =>{
 
-    response.setHeader("Content-Type", "text/plain")
+    response.setHeader("Content-Type", "text/html")
 
-    response.write("Hello, World!")
+    response.write("<h1>Hello, World!</h1>")
 
     response.end()
 
