@@ -1,16 +1,3 @@
-The response object contains information that should be returned to the client. It can contain data, headers, and status codes.
-
-We need to formulate a response object and send it back to the client. First, we need to specify the kind of data we want to send back. We do this by using the setHeader method on the response object. We set the Content-Type header to the type of data we want to send back. 
-    `response.setHeader("Content-Type", "${dataType}")`
-
-Next, we need write the data to the response object. We do this by using the write method on the response object. We pass the data we want to send back as a parameter to the write method.
-    `response.write(${data})`
-
-Finally, we need to end the response. We do this by using the end method on the response object.
-    `response.end()`
-
-We can also send HTML files, by using readFile method to read the file and then send it back to the client. Refer to script.js
-
-We can also use the `end` method to send the response back to the client. Refer to script.js
+We can configure the routes so that we can have a different route for each page.
 
 video #4

@@ -5,7 +5,31 @@ const server = http.createServer((request, response) =>{
 
     response.setHeader("Content-Type", "text/html")
 
-    fs.readFile("./views/index.html", (err, data) =>{
+    let path = "./views/"
+
+    switch(request.url){
+
+        case "/":
+            
+            path += "index.html"
+
+        break
+
+        case "/about":
+            
+            path += "about.html"
+
+        break
+
+        default:
+
+            path += "/404.html"
+
+        break
+
+    }
+
+    fs.readFile(path, (err, data) =>{
 
         if(err){
 
