@@ -12,4 +12,9 @@ Once we define the server, we need to listen for incoming requests using the `li
 
 If we don't specify a hostname, the server will listen on `localhost` by default.
 
+`localhost` is like a domain name that points to the local machine. It has an IP address of `127.0.0.1`.
+
+`port` numbers are like a door on a computer. It's a number that identifies a specific process that's running on a computer. It is usually attached at the end of the hostname separated by a colon.
+    `http://${hostname}:${portNumber}
+
 video #2
