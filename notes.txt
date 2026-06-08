@@ -3,4 +3,14 @@ Express is a framework that help us create routers effectively.
 We install express by using:
     `npm install express`
 
+To use express we need to import it:
+Invoking it by creating a new instance of express and assigning it to a variable.
+Use `listen` method on the variable to start the server.
+
+To set up a router we need to use the `get` method on the variable and pass in the path and a callback function that takes ${req, res} as parameters. Refer to `express.js`
+
+Express automatically sets the header, status code and content type.
+
+We can use the `send` method to send a response back to the client.
+
 video #6
