@@ -1,3 +1,16 @@
-Let's say we had a route to `/about`, but we changed our mind and decided to change it to `/about-us`. We can redirect users from the old route to the new one. We need to add a new `/about-us` and set the status code to 301, which means permanent redirect. then we `setHeader` to `Location` and set it to `/about-us`. Finally, we `end` the response.
+To install a package globally, we use:
+    `npm install -g ${package-name}`
 
-video #4
+To install a package locally to our project, we use:
+    `npm install ${package-name}`
+
+This creates `package.json` file in the root of the project. This file is used to keep track of all the packages we have installed in our project.
+
+`package-lock.json` file is used to keep track of the exact versions of the packages we have installed in our project.
+
+A dependency is a package that our project depends on to run.
+
+Let's install `lodash` package locally to our project:
+    `npm install lodash`
+
+video #5
