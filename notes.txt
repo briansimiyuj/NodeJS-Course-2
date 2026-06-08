@@ -13,4 +13,6 @@ Express automatically sets the header, status code and content type.
 
 We can use the `send` method to send a response back to the client.
 
+To send HTML we can use the `sendFile` method and pass in the path to the file.
+
 video #6
