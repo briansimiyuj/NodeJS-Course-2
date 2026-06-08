@@ -13,4 +13,9 @@ A dependency is a package that our project depends on to run.
 Let's install `lodash` package locally to our project:
     `npm install lodash`
 
+Let's say we clone a repository from GitHub, people don't push `node_modules` folder to their repository. So, we need to install all the dependencies from `package.json` file. We do this by running:
+    `npm install`
+
+Node will look at `package.json` file and install all the dependencies listed in it.
+
 video #5
