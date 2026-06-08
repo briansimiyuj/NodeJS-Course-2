@@ -1,4 +1,11 @@
 Sometimes we need to send dynamic data to the client. This is where templating or view engines come in. `EJS` is one of the most popular view engines for Node.js. Let's install it.
     `npm install ejs`
 
+We need to tell Express to use EJS as our view engine; we do this by adding the following line to our `express.js` file:
+    `app.set("view engine", "ejs")` 
+
+Express will look for a folder called `views` in our project root and use it to render our EJS files. 
+
+In the route we want to send dynamic data to the client, we use the `res.render()` method. This method take ${fileName} and ${data} as arguments. The ${fileName} is the name of the EJS file we want to render, and the ${data} is the data we want to send to the client. But for now, it will take ${fileName} as the only argument.
+
 video #7
