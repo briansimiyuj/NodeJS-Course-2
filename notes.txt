@@ -17,4 +17,6 @@ To send HTML we can use the `sendFile` method and pass in the path to the file.
 
 To redirect to another page we can use the `redirect` method on the response object and pass in the path to the page we want to redirect to.
 
+To serve a not found page we can use the `use` method on the app object and pass in the path and a callback function that takes ${req, res} as parameters. On the ${res} object we can use the `status` method to set the status code to 404 and the `sendFile` method to send the not found page. But it must be the last route because it will catch all the other routes.
+
 video #6

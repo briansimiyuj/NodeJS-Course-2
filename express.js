@@ -25,3 +25,9 @@ app.get("/about-us", (req, res) =>{
     res.redirect("/about")
 
 })
+
+app.use((req, res) =>{
+
+    res.status(404).sendFile(join(__dirName, "views/404.html"))
+
+})
