@@ -1,21 +1,6 @@
-To install a package globally, we use:
-    `npm install -g ${package-name}`
+Express is a framework that help us create routers effectively.
 
-To install a package locally to our project, we use:
-    `npm install ${package-name}`
+We install express by using:
+    `npm install express`
 
-This creates `package.json` file in the root of the project. This file is used to keep track of all the packages we have installed in our project.
-
-`package-lock.json` file is used to keep track of the exact versions of the packages we have installed in our project.
-
-A dependency is a package that our project depends on to run.
-
-Let's install `lodash` package locally to our project:
-    `npm install lodash`
-
-Let's say we clone a repository from GitHub, people don't push `node_modules` folder to their repository. So, we need to install all the dependencies from `package.json` file. We do this by running:
-    `npm install`
-
-Node will look at `package.json` file and install all the dependencies listed in it.
-
-video #5
+video #6
