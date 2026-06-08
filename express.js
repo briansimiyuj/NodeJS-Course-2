@@ -19,3 +19,9 @@ app.get("/about", (req, res) =>{
     res.sendFile(join(__dirName, "views/about.html"))
 
 })
+
+app.get("/about-us", (req, res) =>{
+    
+    res.redirect("/about")
+
+})
