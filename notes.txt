@@ -1,22 +1,4 @@
-Express is a framework that help us create routers effectively.
+Sometimes we need to send dynamic data to the client. This is where templating or view engines come in. `EJS` is one of the most popular view engines for Node.js. Let's install it.
+    `npm install ejs`
 
-We install express by using:
-    `npm install express`
-
-To use express we need to import it:
-Invoking it by creating a new instance of express and assigning it to a variable.
-Use `listen` method on the variable to start the server.
-
-To set up a router we need to use the `get` method on the variable and pass in the path and a callback function that takes ${req, res} as parameters. Refer to `express.js`
-
-Express automatically sets the header, status code and content type.
-
-We can use the `send` method to send a response back to the client.
-
-To send HTML we can use the `sendFile` method and pass in the path to the file.
-
-To redirect to another page we can use the `redirect` method on the response object and pass in the path to the page we want to redirect to.
-
-To serve a not found page we can use the `use` method on the app object and pass in the path and a callback function that takes ${req, res} as parameters. On the ${res} object we can use the `status` method to set the status code to 404 and the `sendFile` method to send the not found page. But it must be the last route because it will catch all the other routes.
-
-video #6
+video #7
