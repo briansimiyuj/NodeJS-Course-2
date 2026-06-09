@@ -1,5 +1,8 @@
-Express has other third party middleware that we can use to help us with our routes. In ths commit, we'll use `morgan` to log our requests. Let's install it:
-    `npm install morgan`
+Server protects our files from being accessed by the user. To allow the browser to access the file, we need to use a middleware that will serve the file to the browser.
 
+We can use the express.static() middleware to serve static files such as images, CSS files, and JavaScript files. We have to pass the path to the directory that contains the static files as an argument to the express.static() middleware.
+    `app.use(express.static(join(__dirname, ${directoryPath})))`
+
+Then on the client side, we can access the file by using absolute path to the file. For example, if we have a file called "style.css" in the "public/CSS" directory, we can access it by using the following path: `style.css`
 
 video #8

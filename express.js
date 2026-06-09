@@ -13,6 +13,8 @@ app.listen(3000)
 
 app.use(morgan("dev"))
 
+app.use(express.static(join(__dirName, "public/CSS")))
+
 app.get("/", (req, res) =>{
 
     const blogs =[
