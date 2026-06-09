@@ -1,8 +1,9 @@
-Server protects our files from being accessed by the user. To allow the browser to access the file, we need to use a middleware that will serve the file to the browser.
+There are main types of Databases: SQL and NoSQL
 
-We can use the express.static() middleware to serve static files such as images, CSS files, and JavaScript files. We have to pass the path to the directory that contains the static files as an argument to the express.static() middleware.
-    `app.use(express.static(join(__dirname, ${directoryPath})))`
+SQL is a structured query language that is used to manage data in a relational database management system (RDBMS). It uses tables to store data and allows for complex queries and relationships between data.
 
-Then on the client side, we can access the file by using absolute path to the file. For example, if we have a file called "style.css" in the "public/CSS" directory, we can access it by using the following path: `style.css`
+NoSQL is a non-relational database management system that is used to store and manage large amounts of unstructured data. It uses collections of documents. Each collection contains one type of document, and each document can have a different structure. The document contains key-value pairs.
 
-video #8
+An example of a NoSQL database is MongoDB, which is a document-oriented database that stores data in JSON-like documents.
+
+video #9
