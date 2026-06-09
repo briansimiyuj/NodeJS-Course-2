@@ -1,16 +1,7 @@
-Sometimes we need to send dynamic data to the client. This is where templating or view engines come in. `EJS` is one of the most popular view engines for Node.js. Let's install it.
-    `npm install ejs`
+We can create a file that can be shared between the views. This is called Partial Views. This can be the header, navbar, footer, etc.
 
-We need to tell Express to use EJS as our view engine; we do this by adding the following line to our `express.js` file:
-    `app.set("view engine", "ejs")` 
+Let's create a partial view for the navbar. We do the markup for the navbar only without the html tags. We can then use this partial view in our views by using `include(${filePath})` ${filePath} is the relative path to the partial view.
 
-Express will look for a folder called `views` in our project root and use it to render our EJS files. 
-
-In the route we want to send dynamic data to the client, we use the `res.render()` method. This method take ${fileName} and ${data} as arguments. The ${fileName} is the name of the EJS file we want to render, and the ${data} is the data we want to send to the client. But for now, it will take ${fileName} as the only argument.
-
-Let's we want to have a dynamic title for each page. We can do this by adding another argument ${data} to the `res.render()` method. Then on the EJS file, we can access the data by using 
-    `<%= ${data} %>`
-
-We can also some JavaScript code inside the EJS file by using `<% %>`. Refer to `index.ejs` for example.
+Let's do the same for the head and footer.
 
 video #7
