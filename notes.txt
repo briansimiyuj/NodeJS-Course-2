@@ -11,4 +11,6 @@ In the route we want to send dynamic data to the client, we use the `res.render(
 Let's we want to have a dynamic title for each page. We can do this by adding another argument ${data} to the `res.render()` method. Then on the EJS file, we can access the data by using 
     `<%= ${data} %>`
 
+We can also some JavaScript code inside the EJS file by using `<% %>`. Refer to `index.ejs` for example.
+
 video #7
