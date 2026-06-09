@@ -1,9 +1,10 @@
-There are main types of Databases: SQL and NoSQL
+A mongoose is an Object Document Mapping (ODM) library for MongoDB. It wraps MongoDB driver functionality and makes it much easier to work with. It allows us to create simple data models which have queries to perform CRUD operations on the database.
 
-SQL is a structured query language that is used to manage data in a relational database management system (RDBMS). It uses tables to store data and allows for complex queries and relationships between data.
+Schema defines the structure of the document and the types of the data. It is used to create a new model. For example, we can create a schema for a user with an ID, name, email, and password. For a blog, we can create a schema with an ID, title, snippet and content.
 
-NoSQL is a non-relational database management system that is used to store and manage large amounts of unstructured data. It uses collections of documents. Each collection contains one type of document, and each document can have a different structure. The document contains key-value pairs.
+A model allows us to perform CRUD operations on the database. For example, we can create a new user, update an existing user, delete a user, and find a user by their ID.
 
-An example of a NoSQL database is MongoDB, which is a document-oriented database that stores data in JSON-like documents.
+To install mongoose, we can use:
+    `npm install mongoose`
 
 video #9
