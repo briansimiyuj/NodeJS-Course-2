@@ -1,4 +1,5 @@
 import express from "express"
+import morgan from "morgan"
 import { dirname, join } from "path"
 import { fileURLToPath } from "url"
 
@@ -10,25 +11,7 @@ app.set("view engine", "ejs")
 
 app.listen(3000)
 
-app.use((req, res, next) =>{
-
-    console.log('New request made: ')
-
-    console.log('Host: ', req.hostname)
-
-    console.log('Path: ', req.path)
-
-    console.log('Method: ', req.method)
-
-    next()
-
-})
-
-app.use((req, res, next) =>{
-
-    console.log('In the next middleware')
-
-})
+app.use(morgan("dev"))
 
 app.get("/", (req, res) =>{
 

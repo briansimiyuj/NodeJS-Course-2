@@ -1,17 +1,5 @@
-A `middleware` is a code that runs on the server between getting the request and sending the response.
-We can have multiple middlewares in a single route.
-They run from top to bottom.
+Express has other third party middleware that we can use to help us with our routes. In ths commit, we'll use `morgan` to log our requests. Let's install it:
+    `npm install morgan`
 
-Examples Of Middleware:
-   1. Logger middleware to log every request.
-   2. Authentication middleware to check if the user is authenticated or not.
-   3. Middleware to parse JSON data from the request body.
-   4. Middleware to return a 404 error if the requested resource is not found.
-
-Let's create a simple middleware function that logs every request. We will apply the `use` method to the `app` object which takes `request` and `response` as parameters.
-
-The requests are logged in the console but the browser keeps on loading indefinitely. This is because the middleware doesn't know what to do next. We need to tell the middleware to pass the control to the next middleware or the route handler. We do this by adding a third parameter called `next`, then calling it inside the middleware function.
-
-By calling `next()` we are telling the middleware to send the request to the next middleware or the route handler.
 
 video #8
