@@ -8,4 +8,7 @@ Express will look for a folder called `views` in our project root and use it to 
 
 In the route we want to send dynamic data to the client, we use the `res.render()` method. This method take ${fileName} and ${data} as arguments. The ${fileName} is the name of the EJS file we want to render, and the ${data} is the data we want to send to the client. But for now, it will take ${fileName} as the only argument.
 
+Let's we want to have a dynamic title for each page. We can do this by adding another argument ${data} to the `res.render()` method. Then on the EJS file, we can access the data by using 
+    `<%= ${data} %>`
+
 video #7
