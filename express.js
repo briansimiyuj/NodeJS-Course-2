@@ -10,7 +10,7 @@ app.set("view engine", "ejs")
 
 app.listen(3000)
 
-app.use((req, res) =>{
+app.use((req, res, next) =>{
 
     console.log('New request made: ')
 
@@ -19,6 +19,14 @@ app.use((req, res) =>{
     console.log('Path: ', req.path)
 
     console.log('Method: ', req.method)
+
+    next()
+
+})
+
+app.use((req, res, next) =>{
+
+    console.log('In the next middleware')
 
 })
 

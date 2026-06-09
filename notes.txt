@@ -10,4 +10,8 @@ Examples Of Middleware:
 
 Let's create a simple middleware function that logs every request. We will apply the `use` method to the `app` object which takes `request` and `response` as parameters.
 
+The requests are logged in the console but the browser keeps on loading indefinitely. This is because the middleware doesn't know what to do next. We need to tell the middleware to pass the control to the next middleware or the route handler. We do this by adding a third parameter called `next`, then calling it inside the middleware function.
+
+By calling `next()` we are telling the middleware to send the request to the next middleware or the route handler.
+
 video #8
