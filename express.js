@@ -10,6 +10,18 @@ app.set("view engine", "ejs")
 
 app.listen(3000)
 
+app.use((req, res) =>{
+
+    console.log('New request made: ')
+
+    console.log('Host: ', req.hostname)
+
+    console.log('Path: ', req.path)
+
+    console.log('Method: ', req.method)
+
+})
+
 app.get("/", (req, res) =>{
 
     const blogs =[

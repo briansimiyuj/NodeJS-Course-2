@@ -1,7 +1,13 @@
-We can create a file that can be shared between the views. This is called Partial Views. This can be the header, navbar, footer, etc.
+A `middleware` is a code that runs on the server between getting the request and sending the response.
+We can have multiple middlewares in a single route.
+They run from top to bottom.
 
-Let's create a partial view for the navbar. We do the markup for the navbar only without the html tags. We can then use this partial view in our views by using `include(${filePath})` ${filePath} is the relative path to the partial view.
+Examples Of Middleware:
+   1. Logger middleware to log every request.
+   2. Authentication middleware to check if the user is authenticated or not.
+   3. Middleware to parse JSON data from the request body.
+   4. Middleware to return a 404 error if the requested resource is not found.
 
-Let's do the same for the head and footer.
+Let's create a simple middleware function that logs every request. We will apply the `use` method to the `app` object which takes `request` and `response` as parameters.
 
-video #7
+video #8
