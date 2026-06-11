@@ -1,15 +1,5 @@
-A mongoose is an Object Document Mapping (ODM) library for MongoDB. It wraps MongoDB driver functionality and makes it much easier to work with. It allows us to create simple data models which have queries to perform CRUD operations on the database.
+Now we need to create a model and a schema for the database. Let's create a file called `blog.js` in the `models` directory. Import the `mongoose` library.
 
-Schema defines the structure of the document and the types of the data. It is used to create a new model. For example, we can create a schema for a user with an ID, name, email, and password. For a blog, we can create a schema with an ID, title, snippet and content.
-
-A model allows us to perform CRUD operations on the database. For example, we can create a new user, update an existing user, delete a user, and find a user by their ID.
-
-To install mongoose, we can use:
-    `npm install mongoose`
-
-To connect to the database, we can use `connect()` method on the mongoose object and pass the connection string as an argument. Then log the connection status and catch any errors that may occur.`
-    `mongoose.connect('mongodb://localhost:27017/mydatabase')
-        .then(() => console.log('Connected to MongoDB'))
-        .catch(err => console.error('Could not connect to MongoDB', err))`
+Get the `Schema` object from `mongoose`, then create a new instance of `Schema` which takes an object as an argument. This object defines the structure of the blog post document. We'll need a title, snippet, and body for each blog post. Each will be a string and will be required. We can pass second argument to `Schema` to specify the timestamps option.
 
 video #9
