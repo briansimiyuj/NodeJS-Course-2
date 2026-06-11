@@ -1,14 +1,3 @@
-Now we need to create a model and a schema for the database. Let's create a file called `blog.js` in the `models` directory. Import the `mongoose` library.
-
-Get the `Schema` object from `mongoose`, then create a new instance of `Schema` which takes an object as an argument. This object defines the structure of the blog post document. We'll need a title, snippet, and body for each blog post. Each will be a string and will be required. We can pass second argument to `Schema` to specify the timestamps option.
-
-We now create a model based on the schema. The model will be called `Blog` (capitalized). The model will be a constructor function that takes two arguments: the name of the collection in the database and the schema. 
-    `const ${modelName} = mongoose.model(${modelCollection}, ${schema})`
-
-Then we export the model.
-
-Let's create a new route to "/add-blog". Inside the route, we'll create a new blog instance based on the `Blog` model. Then we use `save` method on the blog instance to save it to the database. Finally, we send the result as a response back to the client.
-
-The response is the blog on the database, which includes the id and timestamps and not the instance
+Let's now retreive blogs from the database. We'll create a new route to "/all-blogs", then use `find` method on `Blog` model to get all blogs from the database. Then we'll send the blogs as a response.
 
 video #9
