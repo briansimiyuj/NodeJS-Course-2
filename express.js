@@ -48,6 +48,14 @@ app.get("/all-blogs", (req, res) =>{
     
 })
 
+app.get("/single-blog", (req, res) =>{
+    
+    Blog.findById('6a2a5e48f0abd99386ca2e37')
+        .then(result => res.send(result))
+        .catch(err => console.log(err))
+
+})
+
 app.get("/", (req, res) =>{
 
     const blogs =[
