@@ -7,4 +7,9 @@ A model allows us to perform CRUD operations on the database. For example, we ca
 To install mongoose, we can use:
     `npm install mongoose`
 
+To connect to the database, we can use `connect()` method on the mongoose object and pass the connection string as an argument. Then log the connection status and catch any errors that may occur.`
+    `mongoose.connect('mongodb://localhost:27017/mydatabase')
+        .then(() => console.log('Connected to MongoDB'))
+        .catch(err => console.error('Could not connect to MongoDB', err))`
+
 video #9

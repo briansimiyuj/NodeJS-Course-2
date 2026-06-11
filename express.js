@@ -1,11 +1,19 @@
 import express from "express"
 import morgan from "morgan"
+import mongoose from "mongoose"
+import dotenv from "dotenv"
 import { dirname, join } from "path"
 import { fileURLToPath } from "url"
+
+dotenv.config()
 
 const app = express(),
       __fileName = fileURLToPath(import.meta.url),
       __dirName = dirname(__fileName)
+
+mongoose.connect(process.env.dbURI)
+    .then(() => console.log('MongoDB connected ✅'))
+    .catch(err => console.log(err))
 
 app.set("view engine", "ejs")
 
