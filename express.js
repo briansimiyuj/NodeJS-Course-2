@@ -4,6 +4,7 @@ import mongoose from "mongoose"
 import dotenv from "dotenv"
 import { dirname, join } from "path"
 import { fileURLToPath } from "url"
+import Blog from "./models/blog.js"
 
 dotenv.config()
 
@@ -22,6 +23,22 @@ app.listen(3000)
 app.use(morgan("dev"))
 
 app.use(express.static(join(__dirName, "public/CSS")))
+
+app.get("/add-blog", (req, res) =>{
+    
+    const blog = new Blog({
+
+        title: 'My new blog 2',
+        snippet: 'About my new blog',
+        body: 'More about my new blog'
+        
+    })
+
+    blog.save()
+        .then(result => res.send(result))
+        .catch(err => console.log(err))
+
+})
 
 app.get("/", (req, res) =>{
 

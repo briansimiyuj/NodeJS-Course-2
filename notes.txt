@@ -7,4 +7,8 @@ We now create a model based on the schema. The model will be called `Blog` (capi
 
 Then we export the model.
 
+Let's create a new route to "/add-blog". Inside the route, we'll create a new blog instance based on the `Blog` model. Then we use `save` method on the blog instance to save it to the database. Finally, we send the result as a response back to the client.
+
+The response is the blog on the database, which includes the id and timestamps and not the instance
+
 video #9
