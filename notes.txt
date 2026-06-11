@@ -1,3 +1,16 @@
-We can now send the data from the database back to our view engine and render it on the page. Refer to `express.js`
+So far we have only use GET requests, but we also have other types of requests like POST, PUT, DELETE, etc.
+   - GET is used to retrieve data from a database
+   - POST is used to create a new data in a database
+   - PUT is used to update an existing data in a database
+   - DELETE is used to delete a data in a database
 
-video #9
+We need to create a new route for each type of request. For example, we can create a new route for POST request
+
+We need to add `action` attribute to our form to tell it what to do when the form is submitted. Also, we need to add `method` attribute to our form to tell it what type of request to send. 
+
+For the input fields, we need to add `name` attribute to tell it what to send to the server.
+
+Then on the server side, we need to create a new route for POST request. Before we can create a new route, we need to use a middleware that parse the data we submitted into a workable format. It will attach the data to the request object as `body`.
+   `app.use(express.urlencoded({ extended: true }))`
+
+video #10
