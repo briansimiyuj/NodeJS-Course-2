@@ -1,3 +1,6 @@
-Let's now save the data to a database; we first create a new instance of `Blog` and pass it the data from the request body as an argument. 
+Route parameters are parts of a route that can change, for example, 
+   `${hostName}:${portNumber}/${routeParameter}`
+
+To get the specific route parameter, we use the `:routeParameter` syntax in the route definition.  Let's create a route to a single blog. Inside the route, we can retreive the route parameter using the `req.params` object. In this case, `req.params.id`. Then we use `findById` method on the `Blog` model to get the blog with the specified id. If the blog is found, we send a details view. If not, we send a 404 response.
 
 video #10
