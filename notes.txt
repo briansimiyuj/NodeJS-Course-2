@@ -2,4 +2,9 @@ Now we need to create a model and a schema for the database. Let's create a file
 
 Get the `Schema` object from `mongoose`, then create a new instance of `Schema` which takes an object as an argument. This object defines the structure of the blog post document. We'll need a title, snippet, and body for each blog post. Each will be a string and will be required. We can pass second argument to `Schema` to specify the timestamps option.
 
+We now create a model based on the schema. The model will be called `Blog` (capitalized). The model will be a constructor function that takes two arguments: the name of the collection in the database and the schema. 
+    `const ${modelName} = mongoose.model(${modelCollection}, ${schema})`
+
+Then we export the model.
+
 video #9

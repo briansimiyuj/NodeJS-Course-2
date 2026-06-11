@@ -20,3 +20,7 @@ const blogSchema = new Schema({
     }
 
 }, { timestamps: true })
+
+const Blog = mongoose.model("Blogs", blogSchema)
+
+export default Blog
