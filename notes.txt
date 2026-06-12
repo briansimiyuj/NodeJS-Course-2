@@ -5,4 +5,6 @@ Then on our backend, we'll add a route to handle the delete request.
 
 Inside that route, we'll retreive the blog ID from the request body, then use `findByIdAndDelete` method on the Blog model. Then we send JSON response back to the client; the JSON response will contain `redirect` property with the URL to redirect the user to. 
 
+Back to the frontend, we receive the JSON response, on .then method, we'll check if the response has a redirect property, and if it does, we'll redirect the user to that URL.
+
 video #10

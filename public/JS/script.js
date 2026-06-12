@@ -7,7 +7,12 @@ trashCan.addEventListener("click", (e) =>{
     const endPoint = `/blogs/${trashCan.dataset.doc}`
 
     fetch(endPoint, { method: "DELETE" })
-       .then
+       .then(response => response.json())
+       .then(data =>{
+
+          if(data) window.location.href = data.redirect
+
+       })
        .catch(err => console.log(err))
 
 })
