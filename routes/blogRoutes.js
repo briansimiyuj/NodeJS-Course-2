@@ -1,92 +1,17 @@
 import express from "express"
 import Blog from "./../models/blog.js"
+import { blogIndex, blogDetails, blogDelete, blogCreate, blogPost } from "../controllers/blogController.js"
 
 const blogsRouter = express.Router()
 
-blogsRouter.get("/", (req, res) =>{
-    
-    Blog.find()
+blogsRouter.get("/", blogIndex)
 
-        .sort({ createdAt: -1 })
+blogsRouter.post("/", blogPost)
 
-        .then(result =>{
+blogsRouter.get("/create", blogCreate)
 
-            res.render("index", { title: 'All Blogs', blogs: result })
-            
-        })
+blogsRouter.get("/:id", blogDetails)
 
-        .catch(err =>{
-
-            console.log(err)
-            
-        })
-
-})
-
-blogsRouter.post("/", (req, res) =>{
-
-    const blog = new Blog(req.body)
-
-    blog.save()
-
-        .then(result =>{
-
-            res.redirect("/")
-
-        })
-
-        .catch(err =>{
-
-            console.log(err)
-
-        })
-    
-})
-
-blogsRouter.get("/create", (req, res) =>{
-
-    res.render("create", { title: 'Create Blog' })
-
-})
-
-blogsRouter.get("/:id", (req, res) =>{
-
-    const id = req.params.id
-
-    Blog.findById(id)
-
-        .then(result =>{
-
-            res.render("details", { blog: result, title: 'Blog Details' })
-
-        })
-
-        .catch(err =>{
-
-            res.status(404).render("404", { title: 'Not Found Page '})
-
-        })
-    
-})
-
-blogsRouter.delete("/:id", (req, res) =>{
-    
-    const id = req.params.id
-
-    Blog.findByIdAndDelete(id)
-
-        .then(result =>{
-
-            res.json({ redirect: "/" })
-
-        })
-
-        .catch(err =>{
-
-            console.log(err)
-
-        })
-        
-})
+blogsRouter.delete("/:id", blogDelete)
 
 export default blogsRouter

@@ -1,16 +1,13 @@
-Express router helps us to split our application into different modules. Let's create a file called "blogRoutes.js" 
-Then we transfer all the blog related routes to this file.
-Then we create an instance of express router and assign it to a variable called `blogRouter`.
-Then replace all the routes with `app` with `blogRouter`.
-   - make sure "/create" route comes before route parameter routes
-At the bottom of the file we export the blogRouter.
+MVC stands Model View Controller
 
-In `express.js` we import the blogRouter and use it as a middleware.
-   `app.use(blogRouter)`
+It is a way of structuring code to make it more maintainable and scalable
+We have seen Models and Views in the past
 
-We can add another argument to `app.use()` to specify which path to use the middleware on.
-   `app.use("/blogs", blogRouter)`
+Controllers are the middleman between the model and the view
+We'll extract controller logic from `express.js` and put it in a controller file. Let's create a new file called `blogController.js`
 
-Then we can change the routes in `blogRoutes.js` from "/blogs/..." to "/...".
+Let's create functions to handle the logic of our blog, 
+
+Then on `blogRouter.js` we will import the controller and use the functions to handle the routes
 
 video #11
