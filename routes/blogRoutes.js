@@ -3,7 +3,7 @@ import Blog from "./../models/blog.js"
 
 const blogsRouter = express.Router()
 
-blogsRouter.get("/blogs", (req, res) =>{
+blogsRouter.get("/", (req, res) =>{
     
     Blog.find()
 
@@ -23,7 +23,7 @@ blogsRouter.get("/blogs", (req, res) =>{
 
 })
 
-blogsRouter.post("/blogs", (req, res) =>{
+blogsRouter.post("/", (req, res) =>{
 
     const blog = new Blog(req.body)
 
@@ -31,7 +31,7 @@ blogsRouter.post("/blogs", (req, res) =>{
 
         .then(result =>{
 
-            res.redirect("/blogs")
+            res.redirect("/")
 
         })
 
@@ -43,13 +43,13 @@ blogsRouter.post("/blogs", (req, res) =>{
     
 })
 
-blogsRouter.get("/blogs/create", (req, res) =>{
+blogsRouter.get("/create", (req, res) =>{
 
     res.render("create", { title: 'Create Blog' })
 
 })
 
-blogsRouter.get("/blogs/:id", (req, res) =>{
+blogsRouter.get("/:id", (req, res) =>{
 
     const id = req.params.id
 
@@ -69,7 +69,7 @@ blogsRouter.get("/blogs/:id", (req, res) =>{
     
 })
 
-blogsRouter.delete("/blogs/:id", (req, res) =>{
+blogsRouter.delete("/:id", (req, res) =>{
     
     const id = req.params.id
 
@@ -77,7 +77,7 @@ blogsRouter.delete("/blogs/:id", (req, res) =>{
 
         .then(result =>{
 
-            res.json({ redirect: "/blogs" })
+            res.json({ redirect: "/" })
 
         })
 

@@ -8,4 +8,9 @@ At the bottom of the file we export the blogRouter.
 In `express.js` we import the blogRouter and use it as a middleware.
    `app.use(blogRouter)`
 
+We can add another argument to `app.use()` to specify which path to use the middleware on.
+   `app.use("/blogs", blogRouter)`
+
+Then we can change the routes in `blogRoutes.js` from "/blogs/..." to "/...".
+
 video #11

@@ -41,7 +41,7 @@ app.get("/about", (req, res) =>{
 
 })
 
-app.use(blogsRouter)
+app.use("/blogs", blogsRouter)
 
 app.use((req, res) =>{
 
