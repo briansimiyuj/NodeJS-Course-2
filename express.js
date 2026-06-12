@@ -26,6 +26,8 @@ app.use(express.urlencoded({ extended: true }))
 
 app.use(express.static(join(__dirName, "public/CSS")))
 
+app.use(express.static(join(__dirName, "public/JS")))
+
 
 app.get("/", (req, res) =>{
 

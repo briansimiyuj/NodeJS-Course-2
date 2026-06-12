@@ -1,6 +1,4 @@
-Route parameters are parts of a route that can change, for example, 
-   `${hostName}:${portNumber}/${routeParameter}`
-
-To get the specific route parameter, we use the `:routeParameter` syntax in the route definition.  Let's create a route to a single blog. Inside the route, we can retreive the route parameter using the `req.params` object. In this case, `req.params.id`. Then we use `findById` method on the `Blog` model to get the blog with the specified id. If the blog is found, we send a details view. If not, we send a 404 response.
+Delete requests allow us to delete a resource from the server.
+Let's add a frontend JavaScript function to delete a blog; we make an end point to the blog we want to delete, then we use the `fetch` method with the endpoint URL and the `DELETE` method.
 
 video #10
