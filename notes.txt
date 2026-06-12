@@ -1,10 +1,11 @@
-Delete requests allow us to delete a resource from the server.
-Let's add a frontend JavaScript function to delete a blog; we make an end point to the blog we want to delete, then we use the `fetch` method with the endpoint URL and the `DELETE` method.
+Express router helps us to split our application into different modules. Let's create a file called "blogRoutes.js" 
+Then we transfer all the blog related routes to this file.
+Then we create an instance of express router and assign it to a variable called `blogRouter`.
+Then replace all the routes with `app` with `blogRouter`.
+   - make sure "/create" route comes before route parameter routes
+At the bottom of the file we export the blogRouter.
 
-Then on our backend, we'll add a route to handle the delete request. 
+In `express.js` we import the blogRouter and use it as a middleware.
+   `app.use(blogRouter)`
 
-Inside that route, we'll retreive the blog ID from the request body, then use `findByIdAndDelete` method on the Blog model. Then we send JSON response back to the client; the JSON response will contain `redirect` property with the URL to redirect the user to. 
-
-Back to the frontend, we receive the JSON response, on .then method, we'll check if the response has a redirect property, and if it does, we'll redirect the user to that URL.
-
-video #10
+video #11
