@@ -1,4 +1,8 @@
 Delete requests allow us to delete a resource from the server.
 Let's add a frontend JavaScript function to delete a blog; we make an end point to the blog we want to delete, then we use the `fetch` method with the endpoint URL and the `DELETE` method.
 
+Then on our backend, we'll add a route to handle the delete request. 
+
+Inside that route, we'll retreive the blog ID from the request body, then use `findByIdAndDelete` method on the Blog model. Then we send JSON response back to the client; the JSON response will contain `redirect` property with the URL to redirect the user to. 
+
 video #10
